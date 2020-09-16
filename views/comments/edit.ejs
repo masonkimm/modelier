@@ -1,17 +1,15 @@
-
 <%- include ("../partials/header.ejs")%>
 
 <div class="container">
   <div class="row">
-    <h1 class="text-center">Edit comment </h1>
+    <h1 class="text-center">Edit comment</h1>
 
-   
-
-    <div class="" style="width: 30%; margin: 30px auto;">
-      <form class="align-items-center" action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=Put " method="POST">
-        
-
-      
+    <div class="" style="width: 30%; margin: 30px auto">
+      <form
+        class="align-items-center"
+        action="/designs/<%= campground_id %>/comments/<%= comment._id %>?_method=Put "
+        method="POST"
+      >
         <div class="form-group">
           <input
             class="form-control"
@@ -26,7 +24,7 @@
           <button class="btn btn-md btn-info btn-block">Submit</button>
         </div>
       </form>
-      <a href="/campgrounds">Go Back</a>
+      <a href="/designs">Go Back</a>
     </div>
   </div>
 </div>
