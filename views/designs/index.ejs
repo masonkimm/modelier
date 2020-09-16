@@ -1,0 +1,37 @@
+<%- include ("../partials/header.ejs")%>
+
+
+
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Camp Ground Page</h1>
+      <h3>Wish list: Travel</h3>
+      <p>
+        <a class="btn btn-info btn-md" href="/designs/new"
+          >Add new camp ground</a
+        >
+      </p>
+    </div>
+  </header>
+
+  <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% campGrounds.forEach((site)=>{ %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail" id="index">
+        <img src="<%= site.image %>" class="img-fluid" alt="" />
+        <div class="caption">
+          <h4><%= site.name %></h4>
+        </div>
+        <p>
+          <a class="btn btn-info" href="/designs/<%= site._id %>"
+            >More Info</a
+          >
+        </p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<%- include ("../partials/footer.ejs") %>
+

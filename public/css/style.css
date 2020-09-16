@@ -1,0 +1,30 @@
+body {
+  background-color: lightseagreen;
+}
+b {
+  color: blue;
+}
+
+#index img {
+  object-fit: cover;
+  height: 200px !important;
+  width: 100%;
+  padding: 0;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.caption-full {
+  padding: 1rem;
+}
+
+.delete {
+  display: inline;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
