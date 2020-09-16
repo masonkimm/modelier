@@ -16,7 +16,7 @@ const geocoder = nodeGeocoder(options);
 
 //index route
 router.get('/designs', (req, res) => {
-  // get all campgrounds from db
+  // get all designs from db
   Design.find({}, (err, allDesigns) =>{
     if (err) {
       console.log('error occured');
@@ -58,7 +58,7 @@ router.post('/designs', middleware.isLoggedIn, (req, res) => {
     var location = data[0].formattedAddress;
     var newDesign = {name: name, image: image, description: desc, author:author, price: price, location: location, lat: lat, lng: lng};
     // Create a new design and save to DB
-    Campground.create(newDesign, (err, newlyCreated)=>{
+    Design.create(newDesign, (err, newlyCreated)=>{
         if(err){
             console.log(err);
         } else {

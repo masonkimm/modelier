@@ -8,7 +8,7 @@ const middleware = require('../middleware')
 
 
 // comments new
-router.get('/campgrounds/:id/comments/new', middleware.isLoggedIn, (req, res) => {
+router.get('/designs/:id/comments/new', middleware.isLoggedIn, (req, res) => {
   // res.send("hi")
   Design.findById(req.params.id, (err, foundDesign) => {
     if (err) {
