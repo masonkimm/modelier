@@ -26,7 +26,7 @@ router.post('/register', (req, res) => {
       passport.authenticate('local')(req, res, () => {
         req.flash(
           'success',
-          'Sign Up Successful \n Welcome to Yelpcamp ' + user.username
+          'Sign Up Successful \n Welcome to Modelier ' + user.username
         );
         res.redirect('/designs');
       });
